@@ -23,3 +23,7 @@ Route::get('/teams',[teamsController::class,'list']);
 Route::get('/teams/{team}',[teamsController::class,'find']);
 
 Route::get('/teams/form/{team}',[teamsController::class,'formforteam']);
+
+Route::post('/teams/update/{$team->id}',[teamsController::class,'update']);
+
+Route::post('/teams/{team}',[teamsController::class,'update']);

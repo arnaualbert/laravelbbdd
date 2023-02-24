@@ -20,4 +20,14 @@ class teamsController extends Controller
     public function formforteam(teams $team){
         return view('teams.form',compact('team'));
     }
+
+    public function update(Request $request,teams $team){
+        $teamupdate = teams::find($team->id);
+        $teamupdate->name = $request->name;
+        $teamupdate->coach = $request->coach;
+        $teamupdate->category = $request->category;
+        $teamupdate->budget = $request->budget;
+        $teamupdate->save();
+        return back();
+    }
 }

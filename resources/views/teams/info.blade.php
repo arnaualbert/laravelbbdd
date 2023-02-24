@@ -25,7 +25,7 @@
     <td>{{$player->name}}</td>
     <td>{{$player->surname}}</td>
     <td>{{$player->yearofbirth}}</td>
-    <td>{{$player->salary}}</td>
+    <td>{{$player->salary}}€</td>
 </tr>
 @endforeach
 </tbody>

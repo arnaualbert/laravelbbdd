@@ -21,7 +21,7 @@
                         <td><a href="/teams/{{$team->id}}">{{ $team->name }}</a></td>
                         <td>{{ $team->coach }}</td>
                         <td>{{ $team->category }}</td>
-                        <td>{{ $team->budget }}</td>
+                        <td>{{ $team->budget }}€</td>
                     </tr>
                 @endforeach
             </tbody>
