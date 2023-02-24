@@ -14,6 +14,10 @@ class teamsController extends Controller
     }
 
     public function find(teams $team){
+        return view('teams.info',compact('team'));
+    }
+
+    public function formforteam(teams $team){
         return view('teams.form',compact('team'));
     }
 }

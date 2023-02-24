@@ -21,3 +21,5 @@ Route::get('/home',function(){return view('welcome');});
 Route::get('/teams',[teamsController::class,'list']);
 
 Route::get('/teams/{team}',[teamsController::class,'find']);
+
+Route::get('/teams/form/{team}',[teamsController::class,'formforteam']);
