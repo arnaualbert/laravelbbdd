@@ -12,4 +12,8 @@ class teamsController extends Controller
         $teams = teams::all();
         return view('teams.list',compact('teams'));
     }
+
+    public function find(teams $team){
+        return view('teams.form',compact('team'));
+    }
 }

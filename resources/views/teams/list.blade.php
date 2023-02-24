@@ -18,7 +18,7 @@
                 @foreach ($teams as $team)
                     <tr>
                         <td>{{ $team->id }}</td>
-                        <td>{{ $team->name }}</td>
+                        <td><a href="/teams/{{$team->id}}">{{ $team->name }}</a></td>
                         <td>{{ $team->coach }}</td>
                         <td>{{ $team->category }}</td>
                         <td>{{ $team->budget }}</td>
