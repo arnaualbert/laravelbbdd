@@ -6,5 +6,6 @@
 
 @section('content')
 <h2>Welcome to La Liga</h2>
-<p>An applicacion made with Laravel framework</p>
+<p>Welcome to the best league in the world</p>
+<p>We have the best teams from all the categories</p>
 @endsection

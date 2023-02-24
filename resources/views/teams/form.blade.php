@@ -4,7 +4,6 @@
     @if (empty($team))
         <p>No team found!</p>
     @else
-    <hr/>
         <h1> Edit {{ $team->name }}</h1>
         <form method="post" action="/teams/{{ $team->id }}">
             @csrf
@@ -19,7 +18,7 @@
                 <input type="text" name="budget" value="{{ $team->budget }}" class="form-control">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn">Update Team</button>
+                <button type="submit" class="btn btn-secondary">Update Team</button>
             </div>
         </form>
     @endif
