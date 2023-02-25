@@ -9,7 +9,7 @@
             <label for="">Surname</label>
             <input type="text" name="surname" class="form-control">
             <label for="">Year of birth</label>
-            <input type="text" name="yearofbirth" class="form-control">
+            <input type="number" name="yearofbirth" class="form-control">
             <label for="">Salary</label>
             <input type="number" name="salary" class="form-control">
         </div>
