@@ -9,6 +9,8 @@
 <table class="table">
     <thead>
         <tr>
+            <th scope="col">DELETE</th>
+            <th scope="col">SIGN FOR A TEAM</th>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Surname</th>
@@ -16,12 +18,13 @@
             <th scope="col">Salary</th>
             <th scope="col">Teams Id</th>
             <th scope="col">Current Team</th>
-            <th scope="col">SIGN FOR A TEAM</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($players as $player)
             <tr>
+                <td><a href="/deleteplayer/{{$player->id}}">Delete Player</a></td>
+                <td><a href="/playerscontract/{{$player->id}}">SIGN FOR A TEAM</a></td>
                 <td>{{ $player->id }}</td>
                 <td>{{ $player->name }}</a></td>
                 <td>{{ $player->surname }}</td>
@@ -35,7 +38,6 @@
                 <p> </p>
                 @endif
                 @endforeach
-                <td><a href="/playerscontract/{{$player->id}}">SIGN FOR A TEAM</a></td>
             </tr>
         @endforeach
     </tbody>

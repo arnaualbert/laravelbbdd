@@ -46,7 +46,8 @@ Route::post('/hire/{player}',[teamsController::class,'hireplayer']);
 
 Route::get('/deleteteam/{team}',[teamsController::class,'formtodelete']);
 
-Route::post('/delete/{player}',[teamsController::class,'deleteteam']);
+// Route::post('/delete/{player}',[teamsController::class,'deleteteam']);
+Route::post('/delete/{team}',[teamsController::class,'deleteteam']);
 
 Route::get('/players',[playersController::class,'list']);
 
