@@ -49,3 +49,7 @@ Route::get('/deleteteam/{team}',[teamsController::class,'formtodelete']);
 Route::post('/delete/{player}',[teamsController::class,'deleteteam']);
 
 Route::get('/players',[playersController::class,'list']);
+
+Route::get('/playersadd',[playersController::class,'addplayer']);
+
+Route::post('/playersadd/new',[playersController::class,'store']);

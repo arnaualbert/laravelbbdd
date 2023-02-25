@@ -2,8 +2,10 @@
 
 @section('content')
 @if (empty($players))
+<a href="/playersadd">ADD PLAYER</a>
     <p>No players in the league</p>
 @else
+<a href="/playersadd">ADD PLAYER</a>
 <table class="table">
     <thead>
         <tr>

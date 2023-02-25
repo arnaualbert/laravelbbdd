@@ -12,7 +12,7 @@
             <th scope="col">Surname</th>
             <th scope="col">Year Of Birth</th>
             <th scope="col">Salary</th>
-            <th scope="col">Teams Id</th>
+            <th scope="col">Current Team</th>
             <th scope="col">MAKE DEAL</th>
         </tr>
     </thead>
