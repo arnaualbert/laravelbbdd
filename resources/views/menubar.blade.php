@@ -6,8 +6,8 @@
       <div>
       <ul class="nav navbar-nav">
         <li class="active"><a class="nav-link" href="/home">Home</a></li>
-        <li><a class="nav-link" href="/teams">Teams</a></li>
-        <li><a class="nav-link" href="/players">Players</a></li>
+        <li><a class="nav-link" href="/teams">Manage Teams</a></li>
+        <li><a class="nav-link" href="/players">Manage Players</a></li>
       </ul>
       </div>
 

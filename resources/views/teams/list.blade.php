@@ -12,16 +12,20 @@
                     <th scope="col">Coach</th>
                     <th scope="col">Category</th>
                     <th scope="col">Budget</th>
+                    <th scope="col">Manage</th>
+                    <th scope="col">DELETE</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($teams as $team)
                     <tr>
                         <td>{{ $team->id }}</td>
-                        <td><a href="/teams/{{$team->id}}">{{ $team->name }}</a></td>
+                        <td>{{ $team->name }}</a></td>
                         <td>{{ $team->coach }}</td>
                         <td>{{ $team->category }}</td>
                         <td>{{ $team->budget }}€</td>
+                        <td><a href="/teams/{{$team->id}}">Manage Team</a></td>
+                        <td><a>Delete Team</a></td>
                     </tr>
                 @endforeach
             </tbody>
