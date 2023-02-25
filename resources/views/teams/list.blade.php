@@ -27,5 +27,5 @@
             </tbody>
         </table>
     @endif
-
+        <a href="/teamsadd">NEW TEAM</a>
 @endsection

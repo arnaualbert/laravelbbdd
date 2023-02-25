@@ -17,15 +17,18 @@
             <th scope="col">Surname</th>
             <th scope="col">yearofbirth</th>
             <th scope="col">salary</th>
+            <th scope="col">END CONTRACT</th>
         </tr>
     </thead>
     <tbody>
-@foreach ($team->players as $player )
+@foreach ($team->players as $player)
 <tr>
     <td>{{$player->name}}</td>
     <td>{{$player->surname}}</td>
     <td>{{$player->yearofbirth}}</td>
     <td>{{$player->salary}}€</td>
+    {{-- <td><a href="/playersfire/{{$player->id}}">FIRE</a></td> --}}
+    <td><a href="/playersfire/{{$player->id}}/{{$team->id}}">FIRE</a></td>
 </tr>
 @endforeach
 </tbody>
