@@ -10,6 +10,7 @@
 <p>Category: {{$team->category}}</p>
 <p>Budget: {{$team->budget}}</p>
 <a href="/teams/form/{{$team->id}}">EDIT</a>
+<a href="/makedeallist/{{$team->id}}">SIGN PLAYER</a>
 <table class="table">
     <thead>
         <tr>

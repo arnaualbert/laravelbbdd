@@ -59,4 +59,18 @@ class teamsController extends Controller
         return back();
     }
 
+    public function listofplayerstohire(teams $team){
+        $player = players::all();
+        return view('teams.makedeallist',compact('player','team'));
+    }
+    public function formforhire(players $player,teams $team){
+        return view('teams.hireplayer',compact('player','team'));
+    }
+
+    public function hireplayer(Request $request, players $player){
+        $playerupdate = players::find($player->id);
+        $playerupdate->teams_id = $request->hire;
+        $playerupdate->save();
+        return back();
+    }
 }

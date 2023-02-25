@@ -38,4 +38,10 @@ Route::get('/playersfire/{player}/{team}',[teamsController::class,'formforfire']
 
 Route::post('/fire/{player}',[teamsController::class,'fireplayer']);
 
+Route::get('/makedeallist/{team}',[teamsController::class,'listofplayerstohire']);
+
+Route::get('/playershire/{player}/{team}',[teamsController::class,'formforhire']);
+
+Route::post('/hire/{player}',[teamsController::class,'hireplayer']);
+
 Route::get('/players',[playersController::class,'list']);
