@@ -8,6 +8,8 @@
         <form method="post" action="/teams/{{ $team->id }}">
             @csrf
             <div class="form-group">
+                <label for="">Id</label>
+                <input type="text" name="id" value="{{ $team->id }}" class="form-control" readonly>
                 <label for="">Name</label>
                 <input type="text" name="name" value="{{ $team->name }}" class="form-control">
                 <label for="">Coach</label>
