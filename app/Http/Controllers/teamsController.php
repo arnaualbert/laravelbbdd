@@ -74,7 +74,9 @@ class teamsController extends Controller
         $playerupdate = players::find($player->id);
         $playerupdate->teams_id = $request->hire;
         $playerupdate->save();
-        return back();
+        // return back();
+        $teamjoined = teams::find($playerupdate->teams_id);
+        return view('signedinfo',compact('playerupdate','teamjoined'));
     }
 
     public function formtodelete(teams $team){

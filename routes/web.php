@@ -53,3 +53,7 @@ Route::get('/players',[playersController::class,'list']);
 Route::get('/playersadd',[playersController::class,'addplayer']);
 
 Route::post('/playersadd/new',[playersController::class,'store']);
+
+Route::get('/playerscontract/{player}',[playersController::class,'makecontract']);
+
+Route::post('/signplayer/{player}',[playersController::class,'singforateam']);
