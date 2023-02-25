@@ -18,14 +18,18 @@
     </thead>
     <tbody>
         @foreach ($player as $player)
-        @if ($player->teams_id != $team->id )
+        @if ($player->teams_id != $team->id)
         <tr>
             <td>{{ $player->id }}</td>
             <td>{{ $player->name }}</a></td>
             <td>{{ $player->surname }}</td>
             <td>{{ $player->yearofbirth }}</td>
             <td>{{ $player->salary }}€</td>
-            <td>{{ $player->teams_id }}</td>
+            @foreach ( $teams as $teamofplayer )
+            @if($player->teams_id == $teamofplayer->id)
+            <td>{{ $teamofplayer->name }}</td>
+            @endif
+            @endforeach
             <td><a href="/playershire/{{$player->id}}/{{$team->id}}">MAKE DEAL</a></td>
         </tr>
         @endif

@@ -25,7 +25,7 @@
                         <td>{{ $team->category }}</td>
                         <td>{{ $team->budget }}€</td>
                         <td><a href="/teams/{{$team->id}}">Manage Team</a></td>
-                        <td><a>Delete Team</a></td>
+                        <td><a href="/deleteteam/{{$team->id}}">Delete Team</a></td>
                     </tr>
                 @endforeach
             </tbody>

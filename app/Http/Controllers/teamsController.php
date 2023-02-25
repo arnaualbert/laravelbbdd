@@ -43,7 +43,9 @@ class teamsController extends Controller
         $team->category = $request->category;
         $team->budget = $request->budget;
         $team->save();
-        return back();
+        // return back();
+        $teams = teams::all();
+        return view('teams.list',compact('teams'));
     }
 
     // public function formforfire(players $player){
@@ -61,7 +63,8 @@ class teamsController extends Controller
 
     public function listofplayerstohire(teams $team){
         $player = players::all();
-        return view('teams.makedeallist',compact('player','team'));
+        $teams = teams::all();
+        return view('teams.makedeallist',compact('player','team','teams'));
     }
     public function formforhire(players $player,teams $team){
         return view('teams.hireplayer',compact('player','team'));
@@ -72,5 +75,16 @@ class teamsController extends Controller
         $playerupdate->teams_id = $request->hire;
         $playerupdate->save();
         return back();
+    }
+
+    public function formtodelete(teams $team){
+        return view('teams.deleteteam',compact(('team')));
+    }
+
+    public function deleteteam(Request $request, teams $team){
+        $teamtodelete = teams::find($request->idteam);
+        $teamtodelete->delete();
+        $teams = teams::all();
+        return view('teams.list',compact('teams'));
     }
 }
