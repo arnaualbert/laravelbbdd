@@ -56,9 +56,18 @@ class teamsController extends Controller
     }
     public function fireplayer(Request $request, players $player){
         $playerupdate = players::find($player->id);
+        // $teamfired = $playerupdate->teams_id;
         $playerupdate->teams_id = $request->fire;
         $playerupdate->save();
-        return back();
+        //temporal
+        $teams = teams::all();
+        return view('teams.list',compact('teams'));
+        // return back();
+        // $playerfired = players::find($player->id);
+        // return view('firedinfo',compact('playerfired','teamfired'));
+        // $teamjoined = teams::find($playerupdate->teams_id);
+        // return view('signedinfo',compact('player','teamjoined'));
+
     }
 
     public function listofplayerstohire(teams $team){
