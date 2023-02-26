@@ -62,3 +62,5 @@ Route::post('/signplayer/{player}',[playersController::class,'singforateam']);
 Route::get('/deleteplayer/{player}',[playersController::class,'formtodelete']);
 
 Route::post('/deleteplayer/{player}',[playersController::class,'deleteplayer']);
+
+Route::get('/playeredit/{player}',[playersController::class,'formeditplayer']);

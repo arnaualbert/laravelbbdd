@@ -11,6 +11,7 @@
         <tr>
             <th scope="col">DELETE</th>
             <th scope="col">SIGN FOR A TEAM</th>
+            <th scope="col">EDIT PLAYER</th>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Surname</th>
@@ -25,6 +26,7 @@
             <tr>
                 <td><a href="/deleteplayer/{{$player->id}}">Delete Player</a></td>
                 <td><a href="/playerscontract/{{$player->id}}">SIGN FOR A TEAM</a></td>
+                <td><a href="/playeredit/{{$player->id}}">Edit player</a></td>
                 <td>{{ $player->id }}</td>
                 <td>{{ $player->name }}</a></td>
                 <td>{{ $player->surname }}</td>
