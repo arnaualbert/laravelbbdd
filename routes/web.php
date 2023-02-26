@@ -60,5 +60,5 @@ Route::get('/playerscontract/{player}',[playersController::class,'makecontract']
 Route::post('/signplayer/{player}',[playersController::class,'singforateam']);
 
 Route::get('/deleteplayer/{player}',[playersController::class,'formtodelete']);
-// Route::post('/delete/{player}',[teamsController::class,'deleteteam']);
-Route::post('/delete/{player}',[playersController::class,'deleteteam']);
+
+Route::post('/deleteplayer/{player}',[playersController::class,'deleteplayer']);

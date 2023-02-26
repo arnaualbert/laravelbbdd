@@ -60,4 +60,12 @@ class playersController extends Controller
         return view('players.deleteplayer',compact(('player')));
     }
 
+    public function deleteplayer(Request $request, players $player){
+        $playertodelete = players::find($request->idplayer);
+        $playertodelete->delete();
+        $players = players::all();
+        $teams = teams::all();
+        return view('players.list',compact('players','teams'));
+    }
+
 }

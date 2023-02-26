@@ -2,7 +2,7 @@
 @section('content')
     @if ($player->teams_id == '')
     <h1> DELETE {{ $player->name }}</h1>
-    <form method="post" action="/delete/{{ $player->id }}">
+    <form method="post" action="/deleteplayer/{{ $player->id }}">
         @csrf
         <style>
             input {
