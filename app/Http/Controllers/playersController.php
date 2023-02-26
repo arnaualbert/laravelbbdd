@@ -56,4 +56,8 @@ class playersController extends Controller
 
     }
 
+    public function formtodelete(players $player){
+        return view('players.deleteplayer',compact(('player')));
+    }
+
 }
