@@ -16,7 +16,7 @@
                 <input type="text" name="surname" value="{{ $player->surname }}" class="form-control">
                 <label for="">Year of Birth</label>
                 <input type="number" name="yearofbirth" value="{{ $player->yearofbirth }}" class="form-control">
-                <label for="">SaLARY</label>
+                <label for="">Salary</label>
                 <input type="number" name="salary" value="{{ $player->salary }}" class="form-control">
             </div>
             <div class="form-group">
