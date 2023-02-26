@@ -5,7 +5,7 @@
         <p>No player found!</p>
     @else
         <h1> Edit {{ $player->name }} {{$player->surname}}</h1>
-        <form method="post" action="/teams/{{ $player->id }}">
+        <form method="post" action="/players/{{ $player->id }}">
             @csrf
             <div class="form-group">
                 <label for="">Id</label>
@@ -17,7 +17,7 @@
                 <label for="">Year of Birth</label>
                 <input type="number" name="yearofbirth" value="{{ $player->yearofbirth }}" class="form-control">
                 <label for="">Salary</label>
-                <input type="number" name="salary" value="{{ $player->salary }}" class="form-control">
+                <input type="number" step="0.01" name="salary" value="{{ $player->salary }}" class="form-control">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-secondary">Update Player</button>

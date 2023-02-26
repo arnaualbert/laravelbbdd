@@ -72,4 +72,17 @@ class playersController extends Controller
     public function formeditplayer(players $player){
         return view('players.edit',compact('player'));
     }
+
+    public function editplayer(Request $request,players $player){
+        $playertoupdate = players::find($player->id);
+        $playertoupdate->name = $request->name;
+        $playertoupdate->surname = $request->surname;
+        $playertoupdate->yearofbirth = $request->yearofbirth;
+        $playertoupdate->salary = $request->salary;
+        $playertoupdate->save();
+        $players = players::all();
+        $teams = teams::all();
+        return view('players.list',compact('players','teams'));
+    }
+
 }
