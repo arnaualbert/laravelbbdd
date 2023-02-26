@@ -17,7 +17,7 @@
                 <label for="">Category</label>
                 <input type="text" name="category" value="{{ $team->category }}" class="form-control">
                 <label for="">Budget</label>
-                <input type="text" name="budget" value="{{ $team->budget }}" class="form-control">
+                <input type="number" step="0.01" name="budget" value="{{ $team->budget }}" class="form-control">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-secondary">Update Team</button>
