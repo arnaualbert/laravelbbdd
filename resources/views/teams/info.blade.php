@@ -9,8 +9,8 @@
 <p>Coach: {{$team->coach}}</p>
 <p>Category: {{$team->category}}</p>
 <p>Budget: {{$team->budget}}</p>
-<a href="/teams/form/{{$team->id}}">EDIT</a>
-<a href="/makedeallist/{{$team->id}}">SIGN PLAYER</a>
+<a class="btn btn-primary" href="/teams/form/{{$team->id}}">EDIT</a>
+<a class="btn btn-success" href="/makedeallist/{{$team->id}}">SIGN PLAYER</a>
 <table class="table">
     <thead>
         <tr>
@@ -29,7 +29,7 @@
     <td>{{$player->yearofbirth}}</td>
     <td>{{$player->salary}}€</td>
     {{-- <td><a href="/playersfire/{{$player->id}}">FIRE</a></td> --}}
-    <td><a href="/playersfire/{{$player->id}}/{{$team->id}}">FIRE</a></td>
+    <td><a class="btn btn-danger" href="/playersfire/{{$player->id}}/{{$team->id}}">FIRE</a></td>
 </tr>
 @endforeach
 </tbody>

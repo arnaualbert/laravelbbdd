@@ -2,10 +2,10 @@
 
 @section('content')
 @if (empty($players))
-<a href="/playersadd">ADD PLAYER</a>
+<a class="btn btn-secondary" href="/playersadd">ADD PLAYER</a>
     <p>No players in the league</p>
 @else
-<a href="/playersadd">ADD PLAYER</a>
+<a class="btn btn-secondary" href="/playersadd">ADD PLAYER</a>
 <table class="table">
     <thead>
         <tr>
@@ -24,20 +24,20 @@
     <tbody>
         @foreach ($players as $player)
             <tr>
-                <td><a href="/deleteplayer/{{$player->id}}">Delete Player</a></td>
-                <td><a href="/playerscontract/{{$player->id}}">SIGN FOR A TEAM</a></td>
-                <td><a href="/playeredit/{{$player->id}}">Edit player</a></td>
+                <td><a class="btn btn-danger" href="/deleteplayer/{{$player->id}}">Delete Player</a></td>
+                <td><a class="btn btn-success" href="/playerscontract/{{$player->id}}">SIGN FOR A TEAM</a></td>
+                <td><a class="btn btn-primary" href="/playeredit/{{$player->id}}">Edit player</a></td>
                 <td>{{ $player->id }}</td>
                 <td>{{ $player->name }}</a></td>
                 <td>{{ $player->surname }}</td>
                 <td>{{ $player->yearofbirth }}</td>
                 <td>{{ $player->salary }}€</td>
-                <td>{{ $player->teams_id }}</td>
+                <td>{{ $player->teams_id ?? 'no team'}}</td>
                 @foreach ( $teams as $teamofplayer )
                 @if($player->teams_id == $teamofplayer->id)
-                <td>{{ $teamofplayer->name }}</td>
-                @else
-                <p> </p>
+                <td>{{ $teamofplayer->name  ?? 'no team'}}</td>
+                {{-- @else
+                <p></p> --}}
                 @endif
                 @endforeach
             </tr>

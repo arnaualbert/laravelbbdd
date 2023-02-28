@@ -4,6 +4,7 @@
     @if (empty($teams))
         <p>No teams in the league</p>
     @else
+     <a class="btn btn-secondary" href="/teamsadd">NEW TEAM</a>
         <table class="table">
             <thead>
                 <tr>
@@ -24,12 +25,11 @@
                         <td>{{ $team->coach }}</td>
                         <td>{{ $team->category }}</td>
                         <td>{{ $team->budget }}€</td>
-                        <td><a href="/teams/{{$team->id}}">Manage Team</a></td>
-                        <td><a href="/deleteteam/{{$team->id}}">Delete Team</a></td>
+                        <td><a class="btn btn-primary" href="/teams/{{$team->id}}">Manage Team</a></td>
+                        <td><a class="btn btn-danger" href="/deleteteam/{{$team->id}}">Delete Team</a></td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     @endif
-        <a href="/teamsadd">NEW TEAM</a>
 @endsection
