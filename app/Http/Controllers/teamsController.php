@@ -22,13 +22,17 @@ class teamsController extends Controller
     }
 
     public function update(Request $request,teams $team){
+        #####new
+        $oldteam = teams::find($team->id);
+        #####
         $teamupdate = teams::find($team->id);
         $teamupdate->name = $request->name;
         $teamupdate->coach = $request->coach;
         $teamupdate->category = $request->category;
         $teamupdate->budget = $request->budget;
         $teamupdate->save();
-        return back();
+        // return back();
+        return view('teamupdateinfo',compact('teamupdate','oldteam'));
     }
 
     public function addteam(){

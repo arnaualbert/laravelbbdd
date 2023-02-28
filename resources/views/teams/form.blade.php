@@ -23,5 +23,10 @@
                 <button type="submit" class="btn btn-secondary">Update Team</button>
             </div>
         </form>
+        <div>
+            <form method="get" action="/teams/{{ $team->id }}">
+                <button type="submit" class="btn btn-secondary">back</button>
+            </form>
+        </div>
     @endif
 @endsection
