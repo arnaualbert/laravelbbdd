@@ -1,3 +1,4 @@
+{{-- is the menu --}}
 <nav class="navbar navbar-default navbar-expand-sm navbar-light">
     <div class="container-fluid">
       <div class="navbar-header">

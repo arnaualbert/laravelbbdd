@@ -1,3 +1,4 @@
+{{-- this view show the contract to the player --}}
 @extends('layout')
 
 @section('content')

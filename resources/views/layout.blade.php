@@ -1,3 +1,4 @@
+{{-- is the main view of the app --}}
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>

@@ -1,3 +1,4 @@
+{{-- is the form to edit the player --}}
 @extends('layout')
 
 @section('content')

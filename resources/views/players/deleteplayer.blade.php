@@ -1,3 +1,4 @@
+{{-- this view is to delete the player --}}
 @extends('layout')
 @section('content')
     @if ($player->teams_id == '')

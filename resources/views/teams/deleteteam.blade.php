@@ -1,3 +1,4 @@
+{{-- is the delete team form --}}
 @extends('layout')
 @section('content')
     @if (count($team->players) == 0)

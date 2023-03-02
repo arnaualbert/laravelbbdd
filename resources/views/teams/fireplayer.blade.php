@@ -1,3 +1,4 @@
+{{-- is the form to fire player --}}
 @extends('layout')
 
 @section('content')

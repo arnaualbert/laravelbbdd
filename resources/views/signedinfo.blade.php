@@ -1,3 +1,4 @@
+{{-- inform that a player have joined a team --}}
 @extends('layout')
 @section('title')
 HERE WE GO

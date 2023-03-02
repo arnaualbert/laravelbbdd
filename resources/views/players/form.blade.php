@@ -1,3 +1,4 @@
+{{-- is the view to add a new a player --}}
 @extends('layout')
 @section('content')
     <h1>ADD NEW PLAYER</h1>

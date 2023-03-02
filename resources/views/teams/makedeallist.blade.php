@@ -1,3 +1,4 @@
+{{-- is the view to list the players  --}}
 @extends('layout')
 
 @section('content')

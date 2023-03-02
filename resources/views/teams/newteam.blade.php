@@ -1,3 +1,4 @@
+{{-- this view add new team --}}
 @extends('layout')
 @section('content')
     <h1>ADD NEW TEAM</h1>

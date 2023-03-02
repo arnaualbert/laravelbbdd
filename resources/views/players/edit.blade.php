@@ -1,3 +1,4 @@
+{{-- this is the view to edit the player --}}
 @extends('layout')
 
 @section('content')

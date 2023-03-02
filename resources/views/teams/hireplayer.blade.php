@@ -1,3 +1,4 @@
+{{-- is the form to hire player --}}
 @extends('layout')
 
 @section('content')

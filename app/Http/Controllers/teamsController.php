@@ -76,15 +76,18 @@ class teamsController extends Controller
         $team->coach = $request->coach;
         $team->category = $request->category;
         $team->budget = $request->budget;
-        $team->save();
-        // return back();
-        $teams = teams::all();
-        return view('teams.list', compact('teams'));
+        // $team->save();
+        // // return back();
+        // $teams = teams::all();
+        if($request->category != null && $request->name != null && $request->coach != null && $request->budget != null){
+            $team->save();
+            $teams = teams::all();
+            return view('teams.list', compact('teams'));
+        }else{
+        return view('teams.newteam', compact('teams'));
+        }
     }
 
-    // public function formforfire(players $player){
-    //     return view('teams.fireplayer',compact('player'));
-    // }
     /**
      * this show the form to fire a player
      * @param $player is the player to be fired
@@ -132,7 +135,11 @@ class teamsController extends Controller
     {
         return view('teams.hireplayer', compact('player', 'team'));
     }
-
+    /**
+     * hire a player from the list of players to the team
+     * @param $request is the request object to get the info from the form
+     * @param $player is the player to hire
+     */
     public function hireplayer(Request $request, players $player)
     {
         $playerupdate = players::find($player->id);
@@ -142,12 +149,18 @@ class teamsController extends Controller
         $teamjoined = teams::find($playerupdate->teams_id);
         return view('signedinfo', compact('playerupdate', 'teamjoined'));
     }
-
+    /**
+     * show the view to delete the team
+     * @param $team is the team to be deleted
+     */
     public function formtodelete(teams $team)
     {
         return view('teams.deleteteam', compact(('team')));
     }
-
+    /**
+     * @param $teams
+     * @param $request is the request object to get the info from the form
+     */
     public function deleteteam(Request $request, teams $team)
     {
         $teamtodelete = teams::find($request->idteam);

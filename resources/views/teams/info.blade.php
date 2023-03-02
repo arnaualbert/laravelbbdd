@@ -1,3 +1,4 @@
+{{-- is the info of the team --}}
 @extends('layout')
 
 @section('content')

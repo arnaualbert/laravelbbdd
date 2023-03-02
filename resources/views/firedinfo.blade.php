@@ -1,3 +1,4 @@
+{{-- inform that a player have left the team --}}
 @extends('layout')
 @section('title')
 THINGS ARE HAPPENING!!

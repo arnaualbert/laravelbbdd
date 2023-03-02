@@ -1,3 +1,4 @@
+{{-- is the view to list --}}
 @extends('layout')
 
 @section('content')

@@ -1,3 +1,4 @@
+{{-- is the first page of the app --}}
 @extends('layout')
 
 @section('topmenu')
