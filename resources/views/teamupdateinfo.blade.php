@@ -10,6 +10,6 @@ THINGS ARE HAPPENING!!!!
 <p>{{$oldteam->name}} have changed the coach to  {{$teamupdate->coach}}</p>
 <p>{{$oldteam->name}} have changed the category to  {{$teamupdate->category}}</p>
 <p>{{$oldteam->name}} have changed the budget to  {{$teamupdate->budget}}</p>
-<a href="/teams">Go to teams manage</a>
-<a href="/players">Go to players manage</a>
+<a class="btn btn-primary" href="/teams">Go to teams manage</a>
+<a class="btn btn-primary" href="/players">Go to players manage</a>
 @endsection

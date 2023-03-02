@@ -21,7 +21,7 @@
         @foreach ($player as $player)
         @if ($player->teams_id != $team->id)
         <tr>
-            <td><a href="/playershire/{{$player->id}}/{{$team->id}}">MAKE DEAL</a></td>
+            <td><a class="btn btn-success" href="/playershire/{{$player->id}}/{{$team->id}}">MAKE DEAL</a></td>
             <td>{{ $player->id }}</td>
             <td>{{ $player->name }}</a></td>
             <td>{{ $player->surname }}</td>
