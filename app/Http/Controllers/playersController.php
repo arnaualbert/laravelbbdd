@@ -34,11 +34,19 @@ class playersController extends Controller
         $player->yearofbirth = $request->yearofbirth;
         $player->salary = $request->salary;
         // $player->teams_id = "";
-        $player->save();
         // return back();
-        $players = players::all();
-        $teams = teams::all();
-        return view('players.list',compact('players','teams'));
+        // $player->save();
+        // $players = players::all();
+        // $teams = teams::all();
+        // return view('players.list',compact('players','teams'));
+        if ($request->name != null && $request->surname != null && $request->yearofbirth != null && $request->salary != null) {
+            $player->save();
+            $players = players::all();
+            $teams = teams::all();
+            return view('players.list',compact('players','teams'));
+        } else {
+            return view('players.form');
+        }
     }
     /**
      * show the view for sign a player
@@ -99,10 +107,19 @@ class playersController extends Controller
         $playertoupdate->surname = $request->surname;
         $playertoupdate->yearofbirth = $request->yearofbirth;
         $playertoupdate->salary = $request->salary;
-        $playertoupdate->save();
-        $players = players::all();
-        $teams = teams::all();
-        return view('players.list',compact('players','teams'));
+        // $playertoupdate->save();
+        // $players = players::all();
+        // $teams = teams::all();
+        // return view('players.list',compact('players','teams'));
+
+        if ($request->name != null && $request->surname != null && $request->yearofbirth != null && $request->salary != null) {
+            $playertoupdate->save();
+            $players = players::all();
+            $teams = teams::all();
+            return view('players.list',compact('players','teams'));
+        } else {
+            return view('players.edit',compact('player'));
+        }
     }
 
 }
